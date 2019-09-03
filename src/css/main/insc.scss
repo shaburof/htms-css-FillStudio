@@ -1,0 +1,19 @@
+.insc {
+    padding: 3em 0;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #9C9C9C;
+
+    .insc__text {margin-top: 1em;}
+    a {
+        color: #7c7c7c;
+        text-decoration: none;
+        border-bottom: 2px solid #00f;
+    }
+    a:hover{
+        color: #555555;
+         border-bottom: 2px solid #555555;
+    }
+}

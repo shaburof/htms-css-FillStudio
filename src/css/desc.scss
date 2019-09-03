@@ -1,0 +1,55 @@
+$color-description:#F2F2F2;
+$color-description-title1:#644D52;
+$color-description-title2:#FF9A55;
+$color-description-title3:#F5A1A0;
+
+.desc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: $color-description;
+
+    .desc__description {
+        margin: 3em;
+
+        .desc__description--title {
+            color: $color-description-title1;
+            font-size: 0.8em;
+            font-weight: 900;
+            margin: 0;
+            letter-spacing: 0.2em;
+        }
+
+        .desc__description--title:after {
+            content: "—";
+            font-size: 15px;
+            display: block;
+            margin: 5px 0;
+        }
+
+        .desc__description--color2 {
+            color: $color-description-title2;
+        }
+
+        .desc__description--color3 {
+            color: $color-description-title3;
+        }
+
+        .desc__description--content {
+            font-size: 1em;
+            font-weight: 400;
+            color: #7c7c7c;
+            margin-top: 0.8em;
+        }
+    }
+
+
+    @media (max-width:550px) {
+        flex-direction: column;
+
+        .desc__description {
+            margin: 1.5em;
+        }
+    }
+}

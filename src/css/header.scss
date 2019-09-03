@@ -1,0 +1,171 @@
+.header {
+    background: linear-gradient(-45deg, #0E08F9, #FC979A);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom 50% left;
+    position: relative;
+
+    .header__title {
+        color: white;
+        font-weight: 400;
+        font-size: 1.2em;
+        position: absolute;
+        width: 45%;
+        bottom: 140px;
+        left: 42px;
+         line-height: 1.5em;
+    }
+
+    .header__desktop-nav {
+        z-index: 20;
+        transition: all 700ms;
+        position: fixed;
+        top: 0;
+        // left: 0;
+        width: 100%;
+        max-width: 1900px;
+        height: 130px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .header__desktop-nav--logo {
+            margin-left: 3rem;
+            position: relative;
+            // z-index: 22;
+
+
+            #logo-black {
+                transition: all 700ms;
+                opacity: 0;
+                height: 20px;
+                transform: translateY(80px);
+                position: absolute;
+                top: 4px;
+
+            }
+
+            #logo-white {
+                position: relative;
+                transform: translateY(-70px);
+                height: 27px;
+                transition: all 1s;
+            }
+
+        }
+
+        .header__desktop-nav--items {
+            transition: all 700ms;
+            color: white;
+            margin: 0;
+            list-style-type: none;
+            font-size: 1.35em;
+            // display: none;
+            display: flex;
+            opacity: 0;
+            font-weight: 500;
+            margin-right: 3.8rem;
+            transform: translateY(-30px);
+
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+
+        .header__desktop-nav--item {
+            margin-left: 3.8rem;
+        }
+    }
+
+    .header__hamburger {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        z-index: 20;
+        cursor: pointer;
+
+        .header__hamburger--line {
+            width: 100%;
+            height: 5px;
+            background: white;
+            border-radius: 2px;
+            margin-bottom: 4px;
+        }
+    }
+
+    @media(min-width:48rem) {
+        background: linear-gradient(to left, rgba(1, 1, 254, 0.8), rgba(252, 152, 155, 0.8)),
+            url('/src/img/notebook.jpg');
+
+        .header__title {
+            font-size: 0.5em;
+            font-size: 1.5em;
+            font-weight: 300;
+        }
+
+        .header__desktop-nav .header__desktop-nav--items {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .header__desktop-nav .header__desktop-nav--item {
+            cursor: pointer;
+        }
+
+        .header__desktop-nav .header__desktop-nav--logo {
+            cursor: pointer;
+        }
+
+        .header__desktop-nav .header__desktop-nav--logo #logo-white {
+            position: relative;
+            transform: translateY(0);
+            height: 41.9px;
+        }
+
+        .header__desktop-nav .header__desktop-nav--logo #logo-black {
+            top: 10px;
+        }
+
+        .header__hamburger {
+            display: none;
+        }
+    }
+
+    .mobile-nav {
+        position: fixed;
+        z-index: 19;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(-45deg, #cf2e86, #f67e87);
+        transition: transform 500ms cubic-bezier(0, 1, 1, 1);
+        transform: translateX(100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .mobile-nav--items {
+            margin-bottom: 130px;
+            display: flex;
+            flex-direction: column;
+            width: 90vw;
+
+            .mobile-nav__item {
+                color: white;
+                border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+                padding: 1em 0;
+                font-size: 1.5em;
+                font-weight: 500;
+            }
+            a{
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+    }
+
+}
