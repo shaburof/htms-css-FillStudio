@@ -306,7 +306,8 @@
 .insc {
   padding: 3em 0;
   width: 90%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  margin-left: 80px;
   font-size: 1.2em;
   font-weight: 500;
   color: #9C9C9C; }
@@ -347,7 +348,10 @@
     text-align: center; }
     .footer .footer__social a {
       border-bottom: none; }
-  .footer a {
+  .footer .footer__social img{
+      cursor: pointer;
+  }
+      .footer a {
     color: white;
     text-decoration: none;
     border-bottom: 1px solid white; }

@@ -199,6 +199,9 @@
   .footer .footer__social {
     flex-basis: 100%;
     text-align: center; }
+    .footer .footer__social img {
+        cursor: pointer;
+    }
     .footer .footer__social a {
       border-bottom: none; }
   .footer a {
